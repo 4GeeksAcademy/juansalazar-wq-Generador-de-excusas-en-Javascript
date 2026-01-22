@@ -6,18 +6,18 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
 
   let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
   let action = ['ate', 'peed', 'crushed', 'broke'];
   let what = ['my homework', 'my phone', 'the car'];
   let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-  //DOM --> acceder a Html desde Javascript
+  let whoRandom = Math.floor(Math.random() * who.length);
+  let actionRandom = Math.floor(Math.random() * action.length);
+  let whatRandom = Math.floor(Math.random() * what.length);
+  let whenRandom = Math.floor(Math.random() * when.length);
 
-  let excuse = document.querySelector('#excuse')
+  let excuse = document.querySelector('#excuse');
 
-  excuse.innerHTML = `${when[1]}`;
-  
-
+  excuse.innerHTML = `${who[whoRandom]} ${action[actionRandom]} ${what[whatRandom]} ${when[whenRandom]}`;
 };
